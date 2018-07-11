@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN sed -i s/httpredir.debian.org/debian.cse.msu.edu/g /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get install -y php
+RUN apt-get install -y php php-curl php-xml
 
 ADD phrets.php /opt/
 ADD index.php /opt/
